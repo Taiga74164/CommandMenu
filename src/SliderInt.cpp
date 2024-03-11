@@ -10,7 +10,7 @@ namespace CommandMenu
 
 	void SliderInt::Display(bool selected) const
 	{
-		std::cout << (selected ? "> " : "  ") << m_name << ": " << m_value << '\n';
+		std::cout << (selected ? "> " : "   ") << m_name << ": " << m_value << '\n';
 	}
 
 	void SliderInt::ChangeValue(int delta)
