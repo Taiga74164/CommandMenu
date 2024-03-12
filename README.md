@@ -11,7 +11,7 @@
 #include "CommandMenu.h"
 
 int main() {
-    ConsoleMenu::Menu menu;
+    CommandMenu::Menu menu;
     // Begin the tabs.
     auto mainTab = std::make_unique<ConsoleMenu::Tab>("Main");
 	auto settingsTab = std::make_unique<ConsoleMenu::Tab>("Settings");
