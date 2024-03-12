@@ -13,15 +13,15 @@
 int main() {
     CommandMenu::Menu menu;
     // Begin the tabs.
-    auto mainTab = std::make_unique<ConsoleMenu::Tab>("Main");
-	auto settingsTab = std::make_unique<ConsoleMenu::Tab>("Settings");
+    auto mainTab = std::make_unique<CommandMenu::Tab>("Main");
+	auto settingsTab = std::make_unique<CommandMenu::Tab>("Settings");
 
     // Main tab contents.
-    mainTab->AddElement(std::make_unique<ConsoleMenu::Toggle>("Feature One", false));
-	mainTab->AddElement(std::make_unique<ConsoleMenu::Toggle>("Feature Two", false));
+    mainTab->AddElement(std::make_unique<CommandMenu::Toggle>("Feature One", false));
+	mainTab->AddElement(std::make_unique<CommandMenu::Toggle>("Feature Two", false));
     // Settings tab contents.
-    settingsTab->AddElement(std::make_unique<ConsoleMenu::SliderInt>("FPS", 60, 30, 240, 30));
-	settingsTab->AddElement(std::make_unique<ConsoleMenu::SliderInt>("Brightness", 20, 0, 100, 10));
+    settingsTab->AddElement(std::make_unique<CommandMenu::SliderInt>("FPS", 60, 30, 240, 30));
+	settingsTab->AddElement(std::make_unique<CommandMenu::SliderInt>("Brightness", 20, 0, 100, 10));
     
     // End the tabs.
     menu.AddTab(std::move(mainTab));
