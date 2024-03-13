@@ -13,7 +13,7 @@ namespace CommandMenu
 		void Display() const;
 		void Navigate(int delta);
 		void ChangeActiveElementValue(int delta);
-		std::string GetName() const { return m_name; }
+		[[nodiscard]] std::string GetName() const { return m_name; }
 
 	private:
 		std::string m_name;

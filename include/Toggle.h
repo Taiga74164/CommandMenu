@@ -11,6 +11,7 @@ namespace CommandMenu
 		Toggle(const std::string& name, std::function<void(bool)> callback);
 		void Display(bool selected) const override;
 		void ChangeValue(int delta) override;
+		[[nodiscard]] bool GetValue() const { return m_value; }
 		
 	private:
 		std::string m_name;
