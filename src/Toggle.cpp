@@ -5,8 +5,9 @@
 namespace CommandMenu
 {
 	Toggle::Toggle(const std::string& name, std::function<void(bool)> callback)
-		: m_name(name), m_value(false), m_callback(callback) 
+		: m_name(name), m_callback(callback) 
 	{
+		m_callback(m_value);
 	}
 
 	void Toggle::Display(bool selected) const
